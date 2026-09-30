@@ -296,7 +296,7 @@ function exportTasksToCalendar(taskobj) {
         icsLines.push(`DTSTAMP:${formatICS(now)}`);
         icsLines.push(`DTSTART:${formatICS(startTime)}`);
         icsLines.push(`DTEND:${formatICS(endTime)}`);
-        icsLines.push(`SUMMARY:Task ${taskTitle}`); // Results in "Task 100", "Task 200", etc.
+        icsLines.push(`SUMMARY:${taskTitle}`); // Results in "Task 100", "Task 200", etc.
         icsLines.push(`DESCRIPTION:Automated calendar import for value ${taskTitle} assigned to day ${dayNumber}.`);
         icsLines.push("END:VEVENT");
     });
